@@ -1,0 +1,53 @@
+<!-- HEADER -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h5>LOJELIS</h5>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <div class="first-links">
+        <li class="nav-item navbar-links">
+          <a routerLinkActive="active" class="a-nav-bar" routerLink="agencies">Accueil</a>
+        </li>
+        <li class="nav-item navbar-links">
+          <a routerLinkActive="active" class="a-nav-bar" routerLink="my-booking">Mes réservations</a>
+        </li>
+      </div>
+      <div class="second-links">
+        <li class="nav-item navbar-links nav-leave">
+          <a routerLinkActive="active" class="a-nav-bar" routerLink="authentification">Quitter</a>
+        </li>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+<!-- FOOTER -->
+<!--
+<div class="footer d-flex justify-content-between">
+  <div class="row">
+    <div class="marg-left">
+      Designed By Lojelis
+    </div>
+    <div class="marg-left">
+      Carte : MapsPeople
+    </div>
+  </div>
+  <div class="marg-right">
+    version 1.1
+  </div>
+</div>
+ -->
+<div class="navbar-sticky-bottom row">
+  <ul class="nav-bar-responsive">   
+    <a routerLinkActive="active" class="a-nav-bar" routerLink="agencies"><span class="icon icon-home2">Accueil</span></a>
+    <a routerLinkActive="active" class="a-nav-bar" routerLink="my-booking"><span class="icon icon-calendar">Mes réservations</span></a>
+    <a routerLinkActive="active" class="a-nav-bar" routerLink="authentification"><span class="icon icon-exit">Quitter</span></a>
+  </ul>
+</div>
+

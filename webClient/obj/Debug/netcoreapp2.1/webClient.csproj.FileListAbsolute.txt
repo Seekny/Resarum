@@ -1,0 +1,11 @@
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\obj\Debug\netcoreapp2.1\webClient.csprojAssemblyReference.cache
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\obj\Debug\netcoreapp2.1\webClient.csproj.CoreCompileInputs.cache
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\obj\Debug\netcoreapp2.1\webClient.AssemblyInfoInputs.cache
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\obj\Debug\netcoreapp2.1\webClient.AssemblyInfo.cs
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\bin\Debug\netcoreapp2.1\webClient.deps.json
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\bin\Debug\netcoreapp2.1\webClient.runtimeconfig.json
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\bin\Debug\netcoreapp2.1\webClient.runtimeconfig.dev.json
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\bin\Debug\netcoreapp2.1\webClient.dll
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\bin\Debug\netcoreapp2.1\webClient.pdb
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\obj\Debug\netcoreapp2.1\webClient.dll
+C:\Users\christophe.sacchi\source\repos\roombookingapi\webClient\obj\Debug\netcoreapp2.1\webClient.pdb

@@ -1,0 +1,143 @@
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
+
+
+
+<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" #myform="ngForm"
+    style="margin-bottom: 100px; margin-top: 50px;" novalidate>
+    <div class="container">
+        <div class="row">
+            <div class="aside-left">
+                <div class="room-details">
+                    <div class="room-name">
+                        {{OneRoom?.RoomName}} - {{ OneRoom?.Agency?.AgencyName }}
+                    </div>
+                    <div class="room-capacity">
+                        <img src="./../../../../assets/images/capacity-image.png" alt="capacity-image">
+                        {{OneRoom?.Places}}
+                        Places
+                    </div>
+                </div>
+                <div class="room-equipments">
+                    <div class="titles-room">
+                        Équipements
+                    </div>
+                    <div>
+                        <ul class="list-equipments">
+                            <li *ngFor="let equipments of ListEquipments">
+                                {{equipments.Equipment.EquipmentName}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="room-description">
+                    <div class="titles-room">
+                        Description
+                    </div>
+                    <div class="text-description">
+                        {{OneRoom?.Description}}
+                    </div>
+                </div>
+
+                <div class="room-comment">
+                    <div class="titles-room">
+                        Commentaire
+                    </div>
+                    <div class="comment-text">
+                        Vous souhaitez préciser quelque chose lors de votre réservation, notez une information
+                        importante à
+                        ne pas oublier ? Utilisez le champ ci-dessous.
+                    </div>
+                    <div class="comment">
+                        <input formControlName="Note" [(ngModel)]="Note" class="input-comment"
+                            placeholder="Si vous souhaitez écrire un commentaire, c'est ici !">
+                    </div>
+                </div>
+            </div>
+            <div class="title-booking-responsive titles-room">
+                Réserver
+            </div>
+            <div class="aside-right">
+
+                <div class="block-booking">
+
+                    <div class="container container-right">
+                        <div class="title-booking">
+                            Choississez des dates pour voirs les disponibilités
+                        </div>
+                        <div class="choices-date">
+                            <div class="start-date">
+                                <div class="image-date-block">
+                                    <img src="./../../../../assets/images/calendar-navbar-responsive-image.png"
+                                        alt="calendar-full" class="image-date">
+                                </div>
+                                <div class="calendar-label">
+
+                                    <input placeholder="De..." formControlName="StartDate" [min]="min"
+                                        [owlDateTime]="dt3" [owlDateTimeTrigger]="dt3" class="calendar-label-input"
+                                        required>
+                                    <owl-date-time [pickerMode]="'dialog'" #dt3></owl-date-time>
+                                </div>
+
+                            </div>
+                            <div #target class="end-date">
+                                <div class="image-date-block">
+                                    <img src="./../../../../assets/images/calendar-navbar-responsive-image.png"
+                                        alt="calendar-full" class="image-date">
+                                </div>
+
+
+                                <div class="calendar-label">
+                                    <input placeholder="A..." formControlName="EndDate" [(ngModel)]="EndDate"
+                                        [min]="min" [owlDateTime]="dt4" [owlDateTimeTrigger]="dt4"
+                                        class="calendar-label-input" required>
+                                    <owl-date-time [pickerMode]="'dialog'" #dt4></owl-date-time>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Ajouter un rappel dans mon agenda pour
+                                cette
+                                réunion</label>
+                        </div>
+
+                        <button class="btn-primary btn-booking" type="submit" (confirm)="createReservation($event)">
+                            RÉSERVER
+                        </button>
+                    </div>
+                    <div *ngIf="reservationForm.get('StartDate').hasError('required') && myform.submitted"
+                        class="alert-danger alert">Date de début requise</div>
+                    <div *ngIf="reservationForm.get('EndDate').hasError('required') && myform.submitted"
+                        class="alert-danger alert">Date de fin requise</div>
+                    <div *ngIf="EndDate <= StartDate && myform.submitted" class="alert-danger alert">La date de fin doit
+                        arriver après celle de début</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Disponibilités
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="full-calendar" id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

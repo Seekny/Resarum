@@ -1,0 +1,28 @@
+<div>
+  <div class="text-agencies-image">
+    Réserver une salle de réunion <br> n'a jamais été aussi simple
+  </div>
+  <h2 class="title-page-agences">Nos agences</h2>
+
+  <div class="row">
+    <div *ngFor="let agency of Agencies" [id]="agency.AgencyID" class="cold-md-12 cards-agences">
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <div>
+            <img  class="bd-placeholder-img card-img-top" src="{{agency.AgencyImage}}" alt="Image Agencies">            
+          </div>
+          <div class="card-body">
+            <p class="card-text agence-name">{{agency.AgencyName | uppercase}}</p>
+            <p class="card-text">{{agency.Address}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button [routerLink]="[agency.AgencyID]" type="button"
+                  class="btn btn-sm btn-outline-secondary btn-agencies">CONSULTER</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

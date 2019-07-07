@@ -1,0 +1,163 @@
+
+
+
+body {
+  height: 100%;
+}
+
+router-outlet {
+  height: 100%;
+}
+
+.navbar {
+  background-color: #e6e6e6 !important;
+}
+
+
+.marg-left {
+  margin-left: 50px;
+}
+
+.marg-right {
+  margin-right: 50px;
+}
+
+.navbar-links {
+  margin-left: 100px;
+}
+
+.a-nav-bar {  
+  font-weight: 600;
+  color: #707070;
+  padding-bottom: 11px;
+}
+
+.a-nav-bar:hover {
+  color: #26A3EB;
+  border-bottom: #26A3EB 3px solid;
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
+.first-links {
+  display: inline-flex;
+}
+
+.second-links {
+  margin-right: 20%;
+}
+
+
+.footer {
+  background-color: #e6e6e6;  
+  align-items: center;
+  margin-top: 50px; 
+  width: 100%;
+  position: absolute;
+}
+
+.navbar-sticky-bottom {
+  position: fixed;
+  bottom: 0px;
+  background-color: #e6e6e6;
+  border-top: 1px solid black;
+  width: 100%;
+  z-index: 1;
+}
+
+.a-nav-bar {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-bar-responsive {  
+    width: 100%;
+    justify-content: space-between;
+    display: inline-flex;
+    font-size: 12px;
+    padding-inline-start: 0px;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+.a-nav-bar>:first-child {
+  padding-right: 10px;
+}
+
+@media (max-width:991px) {
+  .a-nav-bar:hover {
+    color: none;
+    border-bottom: none;
+  }
+
+  .first-links {
+    display: block;
+  }
+  
+  .navbar-nav {
+    margin-left: 15px;
+    list-style: circle;
+  }
+
+  .navbar-links {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width:550px) {
+  .footer {
+    font-size: 12px; 
+    height: 100px;
+    padding-bottom: 60px;
+  }
+  .row {
+    margin-left: 0px;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .navbar-sticky-bottom {
+    display: none;
+  } 
+  .footer {
+    padding-bottom: 0px;
+    height: 50px;
+  }
+}
+
+.navbar-sticky-bottom {  
+
+  .icon-home2:before {
+    content: "\e901";
+    padding-right: 5px;
+    font-size: 2em;
+  }
+  .icon-calendar:before {
+    content: "\e953";
+    padding-right: 5px;
+    font-size: 2em;
+  }
+  .icon-exit:before {
+    content: "\ea14";
+    padding-right: 5px;
+    font-size: 2em;
+  }   
+}
+
+.active {
+  color: #26A3EB;
+}
+

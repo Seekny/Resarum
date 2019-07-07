@@ -1,0 +1,236 @@
+// Import Full Calendar 
+@import url('https://unpkg.com/@fullcalendar/daygrid@4.2.0/main.min.css');
+@import url('https://unpkg.com/@fullcalendar/timegrid@4.2.0/main.min.css');
+@import url('https://unpkg.com/@fullcalendar/core@4.2.0/main.min.css');
+@import url('https://unpkg.com/@fullcalendar/list@4.2.0/main.min.css');
+@import url('https://unpkg.com/@fullcalendar/bootstrap/main.min.css');
+
+.full-calendar[_ngcontent-blt-c2] {
+  width: 90%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 500px;
+}
+
+.fc-title {
+    color:black;
+}
+
+
+body {
+    height: 100%;
+  }
+
+// PREMIER BLOCK A GAUCHE
+
+.aside-left {
+    width: 60%;
+}
+.room-name {
+    color: #26A3EB;
+    font-size: 30px;
+    font-weight: 600;    
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.titles-room {
+    color: #707070;
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.container {
+    color: #707070;
+    font-size: 16px;
+    height: 100%;
+}
+
+#comment-booking {
+  margin-top: 30px;
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.input-comment {
+    width: 100%;
+    padding-bottom: 150px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.input-comment::placeholder {
+    color: #dcd6d6;
+}
+
+
+// SECOND BLOCK A DROITE 
+.aside-right
+{
+    width: 40%;
+}
+
+.block-booking {
+    margin-left: 50px;    
+    margin-bottom: 50px;
+    height: 500px;
+    border:#707070 solid 1px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    -moz-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    -webkit-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    -o-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    box-shadow: 10px 10px 20px 1px #c0c0c0;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#c0c0c0, Direction=134, Strength=20);
+}
+
+.title-booking {
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #26A3EB;
+}
+
+.image-date {
+    background-color: #707070;
+    padding: 5px;  
+    border-bottom-left-radius: 10px; 
+    border-top-left-radius: 10px; 
+}
+
+.calendar-label-btn {
+    width: 100%;   
+    background-color: white;   
+    border: none;
+}
+
+.iamge-date-block {
+    display: inline-flex; 
+}
+
+.start-date {
+    width: 100%;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    display: inline-flex;
+    margin-top: 50px;
+    -moz-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    -webkit-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    -o-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    box-shadow: 10px 10px 20px 1px #c0c0c0;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#c0c0c0, Direction=134, Strength=20);    
+}
+
+.end-date {
+    width: 100%;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    display: inline-flex;    
+    margin-top: 40px;
+    -moz-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    -webkit-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    -o-box-shadow: 10px 10px 20px 1px #c0c0c0;
+    box-shadow: 10px 10px 20px 1px #c0c0c0;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#c0c0c0, Direction=134, Strength=20);
+    margin-bottom: 40px;
+}
+
+.choices-dates {
+    margin: 20px;
+}
+
+.calendar-label-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-top: 7px;    
+    padding-left: 5px;
+}
+
+.container-right {
+    width: 80%;
+}
+
+.btn-booking {
+    margin-top: 40px;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    background-color: #26A3EB;
+    border-radius: 10px;
+    border: none;
+}
+
+.list-equipments {
+    columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+input::placeholder {
+    padding-left: 10px;
+    color: #707070;
+}
+
+// RESPONSIVE 
+
+@media (max-width: 1200px) {
+    .full-calendar {
+        margin-bottom: 400px;
+    }
+}
+
+@media (max-width: 1000) {
+    .full-calendar {
+        margin-bottom: 300px;
+    }
+}
+
+
+
+
+@media (max-width: 769px) {
+    .full-calendar {
+        margin-bottom: 200px;
+}
+    .row {
+        display: initial;
+    }
+
+    .aside-left {
+        width: 100%;
+    }
+
+    .aside-right {
+        width: 100%;
+    }
+
+    .block-booking {
+        margin-left: 0px;
+    }
+
+    .full-calendar {
+        width: 100%;
+    }
+   
+  }
+
+  @media (min-width: 769px){
+    .title-booking-responsive {
+        display: none ;
+    }
+  }
+
+  .accordion {
+    margin-top: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
